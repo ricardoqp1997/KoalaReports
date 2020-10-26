@@ -1,0 +1,185 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>{{ title }}</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static '/assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="{% static 'multimedia/favicon.svg' %}">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{% static '/product.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="{% url 'index' %}" aria-label="Product">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="30" height="30" x="0" y="0" viewBox="0 0 101.968 101.968" style="enable-background:new 0 0 512 512" xml:space="preserve" class="" focusable="false">
+          <g>
+            <g xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path d="M24.715,47.432L7.968,64.86v29.406c0,0.828,0.671,1.5,1.5,1.5h20.334c0.828,0,1.5-0.672,1.5-1.5V49.158l-4.69-1.726    H24.715z" fill="#999999" style=""/>
+                    <path d="M66.135,61.1H45.801c-0.828,0-1.5,0.672-1.5,1.5v31.666c0,0.828,0.672,1.5,1.5,1.5h20.334c0.829,0,1.5-0.672,1.5-1.5V62.6    C67.635,61.772,66.964,61.1,66.135,61.1z" fill="#999999" style=""/>
+                    <path d="M101.724,29.49c-0.777,0.406-1.652,0.621-2.53,0.621c-1.276,0-2.521-0.45-3.5-1.27l-3.694-3.088l-13.365,14.58v53.934    c0,0.828,0.672,1.5,1.5,1.5h20.334c0.829,0,1.5-0.672,1.5-1.5v-64.93C101.885,29.387,101.81,29.445,101.724,29.49z" fill="#999999" style=""/>
+                    <path d="M57.797,54.094c1.144,0.419,2.424,0.108,3.248-0.788l30.839-33.643l7.217,6.032c0.353,0.294,0.847,0.349,1.254,0.136    c0.407-0.214,0.646-0.648,0.605-1.107L99.396,7.235c-0.055-0.625-0.606-1.086-1.231-1.029l-17.49,1.563    c-0.458,0.041-0.846,0.354-0.982,0.791C79.646,8.706,79.631,8.854,79.644,9c0.026,0.294,0.167,0.572,0.403,0.769l7.229,6.043    L57.98,47.769L24.535,35.463c-1.118-0.41-2.373-0.121-3.198,0.735l-20.5,21.333c-1.148,1.195-1.11,3.095,0.084,4.242    c0.583,0.561,1.332,0.837,2.079,0.837c0.788,0,1.574-0.309,2.164-0.921l19.141-19.92L57.797,54.094z" fill="#999999" style=""/>
+                </g>
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+          </g>
+      </svg>
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'main' %}">Pagina principal</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Informes BI</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Soporte</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url 'logout' %}">Cerrar sesión</a>
+  </div>
+</nav>
+
+{% block content_cregeval %} {% endblock %}
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="25" height="25" x="0" y="0" viewBox="0 0 101.968 101.968" style="enable-background:new 0 0 512 512" xml:space="preserve" class="" focusable="false">
+          <g>
+            <g xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path d="M24.715,47.432L7.968,64.86v29.406c0,0.828,0.671,1.5,1.5,1.5h20.334c0.828,0,1.5-0.672,1.5-1.5V49.158l-4.69-1.726    H24.715z" fill="#212529" style=""/>
+                    <path d="M66.135,61.1H45.801c-0.828,0-1.5,0.672-1.5,1.5v31.666c0,0.828,0.672,1.5,1.5,1.5h20.334c0.829,0,1.5-0.672,1.5-1.5V62.6    C67.635,61.772,66.964,61.1,66.135,61.1z" fill="#212529" style=""/>
+                    <path d="M101.724,29.49c-0.777,0.406-1.652,0.621-2.53,0.621c-1.276,0-2.521-0.45-3.5-1.27l-3.694-3.088l-13.365,14.58v53.934    c0,0.828,0.672,1.5,1.5,1.5h20.334c0.829,0,1.5-0.672,1.5-1.5v-64.93C101.885,29.387,101.81,29.445,101.724,29.49z" fill="#212529" style=""/>
+                    <path d="M57.797,54.094c1.144,0.419,2.424,0.108,3.248-0.788l30.839-33.643l7.217,6.032c0.353,0.294,0.847,0.349,1.254,0.136    c0.407-0.214,0.646-0.648,0.605-1.107L99.396,7.235c-0.055-0.625-0.606-1.086-1.231-1.029l-17.49,1.563    c-0.458,0.041-0.846,0.354-0.982,0.791C79.646,8.706,79.631,8.854,79.644,9c0.026,0.294,0.167,0.572,0.403,0.769l7.229,6.043    L57.98,47.769L24.535,35.463c-1.118-0.41-2.373-0.121-3.198,0.735l-20.5,21.333c-1.148,1.195-1.11,3.095,0.084,4.242    c0.583,0.561,1.332,0.837,2.079,0.837c0.788,0,1.574-0.309,2.164-0.921l19.141-19.92L57.797,54.094z" fill="#212529" style=""/>
+                </g>
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+            <g xmlns="http://www.w3.org/2000/svg">
+            </g>
+          </g>
+      </svg>
+        <br>
+        <small class="d-block mb-3 text-muted">&copy; 2020 Cregeval. Todos los derechos reservados.</small>
+        </div>
+            <!--div class="col-6 col-md">
+              <h5>Features</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Cool stuff</a></li>
+                <li><a class="text-muted" href="#">Random feature</a></li>
+                <li><a class="text-muted" href="#">Team feature</a></li>
+                <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                <li><a class="text-muted" href="#">Another one</a></li>
+                <li><a class="text-muted" href="#">Last time</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Resource</a></li>
+                <li><a class="text-muted" href="#">Resource name</a></li>
+                <li><a class="text-muted" href="#">Another resource</a></li>
+                <li><a class="text-muted" href="#">Final resource</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Business</a></li>
+                <li><a class="text-muted" href="#">Education</a></li>
+                <li><a class="text-muted" href="#">Government</a></li>
+                <li><a class="text-muted" href="#">Gaming</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>About</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Team</a></li>
+                <li><a class="text-muted" href="#">Locations</a></li>
+                <li><a class="text-muted" href="#">Privacy</a></li>
+                <li><a class="text-muted" href="#">Terms</a></li>
+              </ul>
+            </div-->
+        </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

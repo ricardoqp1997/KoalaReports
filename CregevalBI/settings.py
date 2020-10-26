@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'CregevalBI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db_cregeval.sqlite3',  # Se cambió el nombre default de la base de datos SQLite3
     }
 }
 
@@ -107,9 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'  # Idioma del proyecto cambiado a español
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'  # Zona horaria modificada a Bogotá
 
 USE_I18N = True
 
@@ -122,3 +123,24 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+"""
+Parametros personalizados para el proyecto Django.
+Aquí van todas las configuraciones extras realizadas para personalizar el proyecto Django.
+
+Todas se colocan acá abajo para tener buen entendimiento del proyecto,
+otras personalizaciones se encuentran mas arriba por el hecho de tener que estar directamente en otras 
+lineas de codigo (como INSTALLED_APPS o INSTALLED_MIDDLEWARE). 
+
+En dichos casos los añadidos personalizados estarán bajo comentario para identificarlos.
+"""
+
+# Modelo personalizado de autenticación basado en correo electrónico
+AUTH_USER_MODEL = 'login_cregeval_bi.CregevalUSer'
+
+# Adición de archivos estaticos al proyecto
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+
+]
