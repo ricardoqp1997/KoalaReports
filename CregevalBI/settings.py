@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Apps para funciones extra en formularios bootstrap
+    'crispy_forms',
+
     # Apps creadas para el portal
     'login_cregeval_bi',
     'main_cregeval_bi',
@@ -52,6 +55,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Middleware adicional para manejar tiempo de inactividad en sesiones iniciadas
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',
 ]
 
 ROOT_URLCONF = 'CregevalBI.urls'
@@ -144,3 +151,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 
 ]
+
+# Configuración de tiempo limite de inactividad en la sesión
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_EXPIRE_SECONDS = 600  # 10 minutos
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 10  # tiempo de espera despues de ultima actividad
+SESSION_TIMEOUT_REDIRECT = '/login/'

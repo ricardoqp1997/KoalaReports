@@ -15,6 +15,7 @@ def index(request):
         return redirect('login/')
 
 
+# Vista de la pagina principal del portal
 @login_required(login_url='http://127.0.0.1:8000/login/')
 def main(request):
 
@@ -30,6 +31,7 @@ def main(request):
         return redirect('/login/')
 
 
+# Vista de la sección de informes del portal
 @login_required(login_url='http://127.0.0.1:8000/login/')
 def informes(request):
 
@@ -45,6 +47,7 @@ def informes(request):
         return redirect('/login/')
 
 
+# Vista de la sección de soporte y ayuda del portal
 @login_required(login_url='http://127.0.0.1:8000/login/')
 def soporte(request):
 

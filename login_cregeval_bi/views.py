@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 
 # Módulos para la manipulación de usuarios
@@ -22,6 +23,7 @@ def login_cregeval(request):
         password = form.cleaned_data.get('password')
 
         user = authenticate(username=username, password=password)
+
         login(request, user)
 
         return redirect('/main/')
