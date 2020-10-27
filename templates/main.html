@@ -18,14 +18,21 @@
         .btn-cregeval{
             background-color: #721c24;
         }
+        .color-link-2{
+            color: #1d0101;
+        }
+        .color-link-2:hover{
+            color: #4c0101;
+        }
 
     </style>
 
     <div class="background-cregeval position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
 
-        <h1 class="display-4 font-weight-normal">Hola Mundo</h1>
-        <p class="lead font-weight-normal">Aquí irá información principal de la pagina</p>
+        <h1 class="display-4 font-weight-normal">Bienvenido, {{ user_name }}</h1>
+        <p class="lead font-weight-normal">Todos sus informes financieros al alcance de su mano. <a class="color-link-2" href="{% url 'informes' %}">Acceda</a> ahora mismo.</p>
         <br>
+
 
         <div id="CregevalCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -39,26 +46,26 @@
                     <img src="{% static '/multimedia/carousel-1-cregeval.png' %}" class="d-block w-100" alt="">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="font-size: 40px">Nuestra atención</h5>
-                        <p>La Atención brindada a nuestros usuarios se caracteriza por escuchar, comprender,
-                            orientar y dar respuesta con calidad humana, ética, técnica y científica.</p>
+                        <p>Somos un equipo especializado en orientar y dar los argumentos necesarios a los empresarios
+                            para que tomen mejores decisiones y que de esta forma se obtengan mejores resultados.</p>
                     </div>
                 </div>
 
                 <div class="carousel-item">
                     <img src="{% static '/multimedia/carousel-2-cregeval.png' %}" class="d-block w-100" alt="">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="font-size: 40px">Servicios</h5>
-                        <p>Brindamos la seguridad de un servicio con amplia trayectoria en planes integrales
-                            de salud y un equipo de profesionales de alta calidad.</p>
+                        <h5 style="font-size: 40px">Propósito</h5>
+                        <p>Nuestro objetivo es que el empresario enfoque sus esfuerzos en los procesos generadores de
+                            dinero en su negocio.</p>
                     </div>
                 </div>
 
                 <div class="carousel-item">
                     <img src="{% static '/multimedia/carousel-3-cregeval.png' %}" class="d-block w-100" alt="">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="font-size: 40px">Nuestro Personal</h5>
-                        <p>Consideramos a nuestros colaboradores, la fuerza principal de la empresa,
-                            su progreso y realización personal y profesional son nuestros logros.</p>
+                        <h5 style="font-size: 40px">Centro de conocimiento</h5>
+                        <p>Desarrollamos programas de capacitación funcionales, en los que su equipo de trabajo se
+                            instruirá de forma práctica y en cortos periodos de tiempo.</p>
                     </div>
                 </div>
             </div>

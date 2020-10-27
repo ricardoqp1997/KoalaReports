@@ -1,9 +1,7 @@
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-
-
-user = None
+from login_cregeval_bi.models import CregevalUSer
 
 
 # redireccionamiento de la pagina respecto a la autenticación del usuario
@@ -19,12 +17,15 @@ def index(request):
 @login_required(login_url='http://127.0.0.1:8000/login/')
 def main(request):
 
+    name = request.user.get_full_name()
+
     if request.user.is_authenticated:
 
         global user
 
         context_inicio = {
             'title': 'Informes Cregeval - Pagina principal',
+            'user_name': name
         }
         return render(request, 'main.html', context_inicio)
     else:
@@ -35,12 +36,13 @@ def main(request):
 @login_required(login_url='http://127.0.0.1:8000/login/')
 def informes(request):
 
+    type_user = CregevalUSer.objects.get(privilegio_user_id=request.user.id).privilegio_user
+    print(type_user)
     if request.user.is_authenticated:
-
-        global user
 
         context_inicio = {
             'title': 'Informes Cregeval - Vista de informes',
+            'type_user': type_user
         }
         return render(request, 'informes.html', context_inicio)
     else:

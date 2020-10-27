@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from main_cregeval_bi.models import CregevalCastType
 
 
 # Modelo para gestión de usuarios en Django y SQLite
@@ -21,6 +22,14 @@ class CregevalUSer(AbstractUser):
         verbose_name='Apellidos',
         help_text='Indique sus apellidos',
         max_length=100
+    )
+
+    privilegio_user = models.ForeignKey(
+        CregevalCastType,
+        null=True,
+        verbose_name='Privilegio asignado',
+        help_text='Designe entre los privilegios existentes, el que sea requerido para el usuario',
+        on_delete=models.SET_NULL
     )
 
     USERNAME_FIELD = 'email'

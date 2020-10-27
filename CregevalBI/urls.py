@@ -25,6 +25,10 @@ from django.contrib.auth import views as auth_views
 from login_cregeval_bi import views as login_views
 from main_cregeval_bi import views as main_views
 
+# Configuración de nombre y titulos del portal administrativo
+admin.site.site_header = 'Administración: Portal de informes'
+admin.site.site_title = 'Informes Cregeval'
+
 urlpatterns = [
 
     # Sitio administrativo
