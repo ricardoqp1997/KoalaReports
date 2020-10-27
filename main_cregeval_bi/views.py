@@ -21,8 +21,6 @@ def main(request):
 
     if request.user.is_authenticated:
 
-        global user
-
         context_inicio = {
             'title': 'Informes Cregeval - Pagina principal',
             'user_name': name
@@ -54,8 +52,6 @@ def informes(request):
 def soporte(request):
 
     if request.user.is_authenticated:
-
-        global user
 
         context_inicio = {
             'title': 'Informes Cregeval - Soporte y ayuda',

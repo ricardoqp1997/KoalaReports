@@ -13,6 +13,7 @@ from .forms import (
 )
 
 
+# Vista de inicio de sesión al portal
 def login_cregeval(request):
 
     form = UserLoginForm(request.POST or None)

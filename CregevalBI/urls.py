@@ -18,6 +18,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Modelo base de django para manejo de grupos
+from django.contrib.auth.models import Group
+
 # Importando views base para autenticación
 from django.contrib.auth import views as auth_views
 
@@ -28,6 +31,9 @@ from main_cregeval_bi import views as main_views
 # Configuración de nombre y titulos del portal administrativo
 admin.site.site_header = 'Administración: Portal de informes'
 admin.site.site_title = 'Informes Cregeval'
+
+# Se elimina el registro del modelo de grupos porque no se usará
+admin.site.unregister(Group)
 
 urlpatterns = [
 

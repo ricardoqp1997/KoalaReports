@@ -39,3 +39,9 @@ class CregevalUSer(AbstractUser):
         'first_name',
         'last_name',
     ]
+
+    class Meta:
+        verbose_name = 'Usuario'
+
+    def __str__(self):
+        return self.username
