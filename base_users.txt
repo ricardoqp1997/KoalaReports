@@ -1,0 +1,7 @@
+ITEM 1
+email==ricardoq@tics-sas.com
+password==Colombia3
+
+ITEM 2
+email==gabrielv@tics-sas.com
+password==Colombia3
