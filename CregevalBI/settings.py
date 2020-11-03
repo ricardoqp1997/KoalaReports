@@ -131,7 +131,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
 """
 Parametros personalizados para el proyecto Django.
 Aquí van todas las configuraciones extras realizadas para personalizar el proyecto Django.
@@ -151,6 +150,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 
 ]
+
+# adición de archivos multimedia al proyecto
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Configuración de tiempo limite de inactividad en la sesión
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True

@@ -5,7 +5,7 @@
 
     <style>
         .background-cregeval{
-            background-color: #721c24;
+            background: #721c24 url("{% static 'multimedia/main-background-carousel.png' %}") no-repeat;
             color: #cbd3da;
 
             -webkit-box-shadow: 0 0 6px -1px rgba(0,0,0,0.75);
@@ -24,17 +24,22 @@
         .color-link-2:hover{
             color: #4c0101;
         }
+        .carousel-additionals{
+            -webkit-box-shadow: 0 0 6px -1px rgba(245,245,245,1);
+            -moz-box-shadow: 0 0 6px -1px rgba(245,245,245,1);
+            box-shadow: 0 0 6px -1px rgba(245,245,245,1);
+        }
 
     </style>
 
     <div class="background-cregeval position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
 
         <h1 class="display-4 font-weight-normal">Bienvenido, {{ user_name }}</h1>
-        <p class="lead font-weight-normal">Todos sus informes financieros al alcance de su mano. <a class="color-link-2" href="{% url 'informes' %}">Acceda</a> ahora mismo.</p>
+        <p class="lead font-weight-normal">Todos los informes financieros de {{ company_name }} al alcance de su mano. <a class="color-link-2" href="{% url 'informes' %}">Acceda</a> ahora mismo.</p>
         <br>
 
 
-        <div id="CregevalCarousel" class="carousel slide" data-ride="carousel">
+        <div id="CregevalCarousel" class="carousel slide carousel-additionals" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -43,29 +48,26 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{% static '/multimedia/carousel-1-cregeval.png' %}" class="d-block w-100" alt="">
+                    <img src="{{ slide1_imagn.url }}" class="d-block w-100" alt="">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="font-size: 40px">Nuestra atención</h5>
-                        <p>Somos un equipo especializado en orientar y dar los argumentos necesarios a los empresarios
-                            para que tomen mejores decisiones y que de esta forma se obtengan mejores resultados.</p>
+                        <h5 style="font-size: 40px">{{ slide1_title }}</h5>
+                        <p>{{ slide1_contn }}</p>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <img src="{% static '/multimedia/carousel-2-cregeval.png' %}" class="d-block w-100" alt="">
+                    <img src="{{ slide2_imagn.url }}" class="d-block w-100" alt="">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="font-size: 40px">Propósito</h5>
-                        <p>Nuestro objetivo es que el empresario enfoque sus esfuerzos en los procesos generadores de
-                            dinero en su negocio.</p>
+                        <h5 style="font-size: 40px">{{ slide2_title }}</h5>
+                        <p>{{ slide2_contn }}</p>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <img src="{% static '/multimedia/carousel-3-cregeval.png' %}" class="d-block w-100" alt="">
+                    <img src="{{ slide3_imagn.url }}" class="d-block w-100" alt="">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="font-size: 40px">Centro de conocimiento</h5>
-                        <p>Desarrollamos programas de capacitación funcionales, en los que su equipo de trabajo se
-                            instruirá de forma práctica y en cortos periodos de tiempo.</p>
+                        <h5 style="font-size: 40px">{{ slide3_title }}</h5>
+                        <p>{{ slide3_contn }}</p>
                     </div>
                 </div>
             </div>
@@ -89,17 +91,15 @@
 
     <div class="container-fluid">
         <div class="jumbotron">
-            <h1 class="display-4">Información a su alcance y comodidad</h1>
-            <p class="lead">Dentro del sitio podrá visualizar información e informes relacionados con la operación
-            financiera de sus clientes.</p>
+            <h1 class="display-4">{{ details_titl }}</h1>
+            <p class="lead">{{ details_deta }}</p>
             <hr class="my-4">
 
             <div class="media">
                 <img src="{% static 'multimedia/icon-1.svg' %}" class="align-self-start mr-3" alt="..." width="45" height="45">
                 <div class="media-body iconos-informativos">
-                    <h5 class="mt-0">Movimientos</h5>
-                    <p>Visualice todos los movimientos monetarios realizados en el periodo, analice los informes
-                    suministrados de manera sencilla e intuitiva.</p>
+                    <h5 class="mt-0">{{ detail1_titl }}</h5>
+                    <p>{{ detail1_cont }}</p>
                 </div>
             </div>
             <br>
@@ -107,9 +107,8 @@
             <div class="media">
                 <img src="{% static 'multimedia/icon-2.svg' %}" class="align-self-start mr-3" alt="..." width="45" height="45">
                 <div class="media-body iconos-informativos">
-                    <h5 class="mt-0">Presupuesto</h5>
-                    <p>Visualice, entienda e identifique el estado del presupuesto vigente. Use la información a su
-                    disposición para tomar decisiones de forma sencilla.</p>
+                    <h5 class="mt-0">{{ detail2_titl }}</h5>
+                    <p>{{ detail2_cont }}</p>
                 </div>
             </div>
             <br>
@@ -117,9 +116,8 @@
             <div class="media">
                 <img src="{% static 'multimedia/icon-3.svg' %}" class="align-self-start mr-3" alt="..." width="45" height="45">
                 <div class="media-body iconos-informativos">
-                    <h5 class="mt-0">Perdidas y ganancias</h5>
-                    <p>Conozca estados financieros en terminos de sus perdidas y ganancias para tomar decisiones de
-                        forma efectiva.</p>
+                    <h5 class="mt-0">{{ detail3_titl }}</h5>
+                    <p>{{ detail3_cont }}</p>
                 </div>
             </div>
             <br>

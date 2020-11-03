@@ -10,8 +10,8 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: rgba(160, 38, 47, 0.5);
-
+  background: rgba(160, 38, 47, 0.5) url("multimedia/cregeval-login-background.png") no-repeat;
+  color: #f8d7da;
 }
 
 .form-signin {
@@ -42,4 +42,8 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.image_margin{
+  margin-top: 5px;
 }

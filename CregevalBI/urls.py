@@ -17,6 +17,8 @@ Including another URLconf
 # Librerías base para administrar URLs
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 # Modelo base de django para manejo de grupos
 from django.contrib.auth.models import Group
@@ -50,6 +52,10 @@ urlpatterns = [
     # Pagina principal y contenido general
     path('main/', main_views.main, name='main'),
     path('main/informes/', main_views.informes, name='informes'),
-    path('main/soporte/', main_views.soporte, name='soporte'),
 
 ]
+
+# Configuración del flujo de archivos multimedia cargados en cada formulario de radicación
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

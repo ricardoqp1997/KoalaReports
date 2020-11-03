@@ -1,3 +1,4 @@
 django-crispy-forms~=1.9.2
 django~=3.1.2
 django-session-timeout~=0.1.0
+pillow~=8.0.1

@@ -38,12 +38,11 @@
 
             <form class="form-signin" method="POST">
 
-
-
                 {% csrf_token %}
 
-                <img class="mb-4" src="{% static '/multimedia/logo_cregeval.webp' %}" alt="" width="200" height="200">
-                <h1 class="h3 mb-3 font-weight-normal">Bienvenido</h1>
+                <img class="mb-4" src="{% static '/multimedia/logo_cregeval.png' %}" alt="" width="320" height="145" style="margin-bottom: 5%">
+
+                <h1 class="image_margin h3 mb-3 font-weight-normal">Bienvenido</h1>
 
                 {% if messages %}
                 {% for message in messages %}

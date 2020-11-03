@@ -9,7 +9,7 @@ from login_cregeval_bi.models import CregevalUSer
 class CregevalUsersAdmin(admin.ModelAdmin):
 
     # Visualización de columnas del modelo de usuarios
-    list_display = ['username', 'email', 'last_name', 'first_name']
+    list_display = ['username', 'email', 'first_name']
 
     # Columnas configuradas para orgnización, filtrado y búsqueda de usuarios
     list_filter = ['username', 'email']
@@ -24,8 +24,8 @@ class CregevalUsersAdmin(admin.ModelAdmin):
             }
         ),
         (
-            'Información personal', {
-                'fields': ['first_name', 'last_name']
+            'Información de la cuenta', {
+                'fields': ['first_name']
             }
         ),
         (
