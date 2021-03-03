@@ -27,7 +27,7 @@
         }
 
       .color-link{
-          color: #721c24
+          color: #5835F2
       }
       .color-link:hover{
           color: red;
@@ -93,8 +93,9 @@
     </a>
 
       {% if user.is_authenticated %}
-            <a class="py-2 d-none d-md-inline-block" href="{% url 'main' %}">Pagina principal</a>
             <a class="py-2 d-none d-md-inline-block" href="{% url 'informes' %}">Informes BI</a>
+            <!--a class="py-2 d-none d-md-inline-block" href="{% url 'main' %}">Detalles adicionales</a-->
+
             <a class="py-2 d-none d-md-inline-block" href="{% url 'logout' %}">Cerrar sesión</a>
       {% else %}
             <a class="py-2 d-none d-md-inline-block" href="{% url 'login' %}">Acceder</a>
@@ -151,7 +152,7 @@
           </g>
       </svg>
         <br>
-        <small class="d-block mb-3 text-muted"><br>&copy; 2020 <a class="color-link" href="https://cregeval.com/" target="_blank">Cregeval.</a> Todos los derechos reservados.</small>
+        <small class="d-block mb-3 text-muted"><br>&copy; 2021 <a class="color-link" href="https://www.koalaandina.com/" target="_blank">Koala.</a> Todos los derechos reservados.</small>
         </div>
             <!--div class="col-6 col-md">
               <h5>Features</h5>

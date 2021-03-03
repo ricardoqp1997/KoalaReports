@@ -40,9 +40,9 @@
 
                 {% csrf_token %}
 
-                <img class="mb-4" src="{% static '/multimedia/logo_cregeval.png' %}" alt="" width="320" height="145" style="margin-bottom: 5%">
+                <img class="mb-4" src="{% static '/multimedia/logo.png' %}" alt="" width="320" height="145" style="margin-bottom: 5%">
 
-                <h1 class="image_margin h3 mb-3 font-weight-normal">Bienvenido</h1>
+                <h1 class="image_margin h3 mb-3 font-weight-normal" style="color: #005cbf">Bienvenido</h1>
 
                 {% if messages %}
                 {% for message in messages %}

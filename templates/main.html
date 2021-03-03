@@ -5,8 +5,8 @@
 
     <style>
         .background-cregeval{
-            background: #721c24 url("{% static 'multimedia/main-background-carousel.png' %}") no-repeat;
-            color: #cbd3da;
+            background: #721c24 url("{% static 'multimedia/fondo.png' %}") no-repeat;
+            color: #f0f9ff;
 
             -webkit-box-shadow: 0 0 6px -1px rgba(0,0,0,0.75);
             -moz-box-shadow: 0 0 6px -1px rgba(0,0,0,0.75);
@@ -16,18 +16,19 @@
             margin-bottom: 30px;
         }
         .btn-cregeval{
-            background-color: #721c24;
+            background-color: #38b0fc;
         }
         .color-link-2{
             color: #1d0101;
         }
         .color-link-2:hover{
-            color: #4c0101;
+            color: #5835F2;
         }
         .carousel-additionals{
             -webkit-box-shadow: 0 0 6px -1px rgba(245,245,245,1);
             -moz-box-shadow: 0 0 6px -1px rgba(245,245,245,1);
             box-shadow: 0 0 6px -1px rgba(245,245,245,1);
+
         }
 
     </style>
@@ -124,7 +125,7 @@
 
             <p>¿Desea conocer y analizar toda su informacion financiera? Acceda a su sección de informes para
             acceder a toda la información.</p>
-            <a class="btn btn-danger btn-cregeval btn-lg" href="{% url 'informes' %}" role="button">Conozca más</a>
+            <a class="btn btn-primary btn-cregeval btn-lg" href="{% url 'informes' %}" role="button">Conozca más</a>
         </div>
     </div>
 {% endblock %}
