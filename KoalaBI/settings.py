@@ -129,8 +129,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
-
 """
 Parametros personalizados para el proyecto Django.
 Aquí van todas las configuraciones extras realizadas para personalizar el proyecto Django.
@@ -145,13 +143,11 @@ En dichos casos los añadidos personalizados estarán bajo comentario para ident
 # Modelo personalizado de autenticación basado en correo electrónico
 AUTH_USER_MODEL = 'login_koala_bi.CregevalUSer'
 
-# Adición de archivos estaticos al proyecto
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-
 ]
 
-# adición de archivos multimedia al proyecto
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
