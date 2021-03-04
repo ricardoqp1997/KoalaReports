@@ -1,9 +1,8 @@
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from login_koala_bi.models import CregevalUSer
 from main_koala_bi.models import CompanyContent
-
+import datetime
 
 # redireccionamiento de la pagina respecto a la autenticación del usuario
 def index(request):
@@ -47,7 +46,7 @@ def main(request):
     if request.user.is_authenticated:
 
         context_inicio = {
-            'title': 'Informes Cregeval - Pagina principal',
+            'title': 'Koala - Información adicional',
             ##
             'user_name': user_name,
             'company_name': company_name,
@@ -77,6 +76,8 @@ def main(request):
             'detail3_titl': detail3_titl,
             'detail3_cont': detail3_cont,
 
+            'year': datetime.date.today().year
+
         }
         return render(request, 'main.html', context_inicio)
     else:
@@ -94,7 +95,7 @@ def informes(request):
     if request.user.is_authenticated:
 
         context_inicio = {
-            'title': 'Informes Cregeval - Vista de informes',
+            'title': 'Koala - Informe de tickets',
 
             'company_logo': company_logo,
             ##

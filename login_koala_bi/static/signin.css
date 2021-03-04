@@ -14,6 +14,17 @@ body {
   color: #f8d7da;
 }
 
+.error-box{
+  background: #bd4147;
+  color: #ffffff;
+  margin: 5%;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 6px -1px rgba(0,0,0,0.75);
+  box-shadow: 0 0 6px -1px rgba(0,0,0,0.75);
+}
+
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -46,4 +57,16 @@ body {
 
 .image_margin{
   margin-top: 5px;
+}
+
+.color-text-footer,.color-welcome{
+  color: #002752;
+}
+
+.border-form-box{
+  border-bottom-color: #002752;
+
+  -webkit-box-shadow: 0 0 6px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 6px -1px rgba(0,0,0,0.75);
+  box-shadow: 0 0 6px -1px rgba(0,0,0,0.75);
 }

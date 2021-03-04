@@ -32,7 +32,7 @@ from main_koala_bi import views as main_views
 
 # Configuración de nombre y titulos del portal administrativo
 admin.site.site_header = 'Administración: Portal de informes'
-admin.site.site_title = 'Informes Cregeval'
+admin.site.site_title = 'Informes Koala'
 
 # Se elimina el registro del modelo de grupos porque no se usará
 admin.site.unregister(Group)

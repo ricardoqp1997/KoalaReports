@@ -10,7 +10,7 @@ class UserLoginForm(forms.Form):
             attrs={
                 'type': 'email',
                 'class': 'form-control',
-                'placeholder': 'Correo electrónico',
+                'placeholder': 'Correo electrónico*',
                 'required': 'required',
                 'autofocus': 'autofocus'
             }
@@ -24,7 +24,7 @@ class UserLoginForm(forms.Form):
             attrs={
                 'type': 'password',
                 'class': 'form-control',
-                'placeholder': 'Contraseña',
+                'placeholder': 'Contraseña*',
                 'required': 'required',
             }
         ),

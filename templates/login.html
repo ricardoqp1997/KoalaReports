@@ -42,28 +42,26 @@
 
                 <img class="mb-4" src="{% static '/multimedia/logo.png' %}" alt="" width="320" height="145" style="margin-bottom: 5%">
 
-                <h1 class="image_margin h3 mb-3 font-weight-normal" style="color: #005cbf">Bienvenido</h1>
+                <h1 class="image_margin h3 mb-3 font-weight-normal color-welcome">Bienvenido</h1>
 
-                {% if messages %}
-                {% for message in messages %}
-                      <div class="alert alert-{{ message.tags }}" style="margin-top: 15px">
-                        {{ message }}
-                      </div>
-                {% endfor %}
+                {% if form.errors or form.non_field_errors %}
+                    <div class="text-center error-box">
+                        {{ form.non_field_errors.as_text }}
+                    </div>
                 {% endif %}
 
-                <label for="{{ form.username.id_for_label }}" class="sr-only">Correo electrónico</label>
+                <label for="{{ form.username.id_for_label }}" class="sr-only border-form-box">Correo electrónico</label>
                 <!--input type="email" class="form-control" placeholder="Usuario" required autofocus-->
                 {{ form.username }}
 
-                <label for="{{ form.password.id_for_label }}" class="sr-only">Contraseña</label>
+                <label for="{{ form.password.id_for_label }}" class="sr-only border-form-box">Contraseña</label>
                 <!--input type="password" class="form-control" placeholder="Contraseña" required-->
                 {{ form.password }}
                 <br>
 
                 <button class="btn btn-lg btn-dark btn-block" type="submit">Ingresar</button>
 
-                <p class="mt-5 mb-3 text-muted">&copy; 2021. Todos los derechos reservados</p>
+                <p class="mt-5 mb-3 color-text-footer">&copy; {{ year }}. Todos los derechos reservados</p>
 
                 <!--div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div-->
             </form>

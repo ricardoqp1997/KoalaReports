@@ -12,6 +12,8 @@ from .forms import (
     UserLoginForm,
 )
 
+import datetime
+
 
 # Vista de inicio de sesión al portal
 def login_cregeval(request):
@@ -32,6 +34,9 @@ def login_cregeval(request):
     login_context = {
         'form': form,
         'title': 'Informes Cregeval',
+        'year': datetime.date.today().year
     }
+
+    print(datetime.date.today().year)
 
     return render(request, 'login.html', login_context)
