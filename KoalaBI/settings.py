@@ -94,7 +94,7 @@ DATABASES = {
 
         'OPTIONS': {
             # ...
-            'timeout': 20,
+            'timeout': 60,
             # ...
         }
     }
