@@ -70,11 +70,13 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+
         },
     },
 ]
@@ -89,6 +91,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db_koala.sqlite3',  # Se cambió el nombre default de la base de datos SQLite3
+
+        'OPTIONS': {
+            # ...
+            'timeout': 20,
+            # ...
+        }
     }
 }
 
