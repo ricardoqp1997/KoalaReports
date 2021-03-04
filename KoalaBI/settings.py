@@ -94,7 +94,7 @@ DATABASES = {
 
         'OPTIONS': {
             # ...
-            'timeout': 60,
+            'timeout': 30,
             # ...
         }
     }
@@ -158,6 +158,9 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'informes'
 
 # Configuración de tiempo limite de inactividad en la sesión
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True

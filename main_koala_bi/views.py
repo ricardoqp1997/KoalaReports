@@ -15,7 +15,7 @@ def index(request):
 
 
 # Vista de la pagina principal del portal
-@login_required(login_url='http://127.0.0.1:8000/login/')
+@login_required(login_url='/login/')
 def main(request):
 
     user_name = request.user.get_full_name()
@@ -84,7 +84,7 @@ def main(request):
 
 
 # Vista de la sección de informes del portal
-@login_required(login_url='http://127.0.0.1:8000/login/')
+@login_required(login_url='/login/')
 def informes(request):
 
     company_bi = CompanyContent.objects.get(cliente_id=request.user.id).bi_link
