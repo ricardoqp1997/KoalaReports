@@ -1,1 +1,1 @@
-web: gunicorn koalaReports.wsgi  
+web: gunicorn KoalaBI.wsgi
