@@ -1,28 +1,16 @@
-# CregevalBI
+# KoalaBI
 
 <b>Nota: Este instructivo únicamente tiene las indicaciones de ejecución y arranquel del proyecto en su fase de desarrollo.</b> 
 
 Este proyecto está escrito bajo el framework Django para el back-end, el front está diseñado a base de Bootstrap y HTML.
-Para su uso correcto se recomienda usar el IDE <a href="https://www.jetbrains.com/es-es/pycharm/download/">PyCharm</a> y
-tener <a href="https://www.anaconda.com/products/individual">Anaconda</a> previamente instalado.
 
 ### 1. Previo a la ejecución del proyecto
 Para ejecutar el proyecto se recomienda seguir los siguientes pasos:
 
-* Instalar el IDE Pycharm (preferiblemente en su versión professional aunque la comunity tambien sirve).
-* Posterior a la instalación, ejecutar Pycharm. En la ventana de inico se encontrarán listadas tres opciones a escoger:
-
-    1.  <i>Create New Project</i>
-    2. <i>Open</i>
-    3. <i>Get from Version Control</i>
-    
-    Seleccionar la opción de <b>Get from Version Control</b> para clonar el repositorio del proyecto.
-
-* Dentro del panel de Pycharm se puede clonar el repositorio por meido del .git del mismo o dimplemente ingresando con 
-el usuario que tenga acceso a este. Lugo de esto el repositorio será clonado y se abrirá el proyecto.
-
-* Con el proyecto abierto dentro del Pycharm nos dirigimos a la esquina inferior derecha del IDE para configurar el 
-interprete. Dentro del panel configuramos un interprete Conda con Python versión 3.8 o superior.
+* Clonar el repositorio.
+* Tener en cuenta que es un proyecto escrito en Djangp (Python).
+* Recomendable: Crear un entorno virtual con virtual env por ejemplo.
+* Un buen IDE a usar como Pycharm o Visual Studio Code.
 
 ### 2. Instalación de parametros para el proyecto
 
@@ -46,4 +34,9 @@ ejecutar el siguiente:
 
 ```python manage.py help```
 
-<b>NOTA: Para temas de producción, despliegue y alojamiento consultar al equipo desarrollador.</b>
+### 3. Ejecución
+
+Credenciales de acceso en la portada de inicio:
+
+* <b>Correo:</b> rdquintana34@ucatolica.edu.co
+* <b>Contraseña:</b> Colombia3
