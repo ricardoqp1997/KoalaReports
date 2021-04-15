@@ -92,16 +92,15 @@ WSGI_APPLICATION = 'KoalaBI.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db_koala.sqlite3',  # Se cambió el nombre default de la base de datos SQLite3
 
-        'OPTIONS': {
-            # ...
-            'timeout': 30,
-            # ...
-        }
-    }
+    'default': dict(
+        ENGINE='django.db.backends.postgresql_psycopg2',
+        NAME='df9mcgqlhbf2p8',
+        USER='mkcgpzwdwikwya',
+        PASSWORD='78eb93a1f01cc8859ce428490d9297fac19d6e3ff5c5b80cd5a41f9300624750',
+        HOST='ec2-54-205-183-19.compute-1.amazonaws.com',
+        PORT='5432'
+    )
 }
 
 
