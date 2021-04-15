@@ -22,7 +22,7 @@ class CompanyContent(models.Model):
         default='Compañía',
     )
 
-    nit = models.IntegerField(
+    nit = models.BigIntegerField(
         verbose_name='NIT de la entidad',
         help_text='Proporcione el Número Identificador Tributario designado para la entidad',
         unique=True,
