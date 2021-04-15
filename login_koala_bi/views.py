@@ -33,7 +33,7 @@ def login_cregeval(request):
 
     login_context = {
         'form': form,
-        'title': 'Informes Cregeval',
+        'title': 'Informes Koala',
         'year': datetime.date.today().year
     }
 
