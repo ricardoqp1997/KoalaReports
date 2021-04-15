@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import django_heroku
 from pathlib import Path
+from decouple import config
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -59,6 +61,8 @@ MIDDLEWARE = [
     # Middleware adicional para manejar tiempo de inactividad en sesiones iniciadas
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django_session_timeout.middleware.SessionTimeoutMiddleware',
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'KoalaBI.urls'
@@ -151,10 +155,14 @@ En dichos casos los añadidos personalizados estarán bajo comentario para ident
 # Modelo personalizado de autenticación basado en correo electrónico
 AUTH_USER_MODEL = 'login_koala_bi.CregevalUSer'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -167,3 +175,5 @@ SESSION_EXPIRE_SECONDS = 600  # 10 minutos
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 10  # tiempo de espera despues de ultima actividad
 SESSION_TIMEOUT_REDIRECT = '/login/'
+
+django_heroku.settings(locals())
