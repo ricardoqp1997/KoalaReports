@@ -10,7 +10,7 @@ class UserLoginForm(forms.Form):
             attrs={
                 'type': 'email',
                 'class': 'form-control',
-                'placeholder': 'Correo electrónico*',
+                'placeholder': 'Correo electrónico (pagina falsa)*',
                 'required': 'required',
                 'autofocus': 'autofocus'
             }
